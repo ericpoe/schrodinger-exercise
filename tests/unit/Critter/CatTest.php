@@ -32,4 +32,9 @@ class CatTest extends \PHPUnit_Framework_TestCase {
     function testCatMoodOnNineLivesIsLoving() {
         $this->assertEquals("loving", $this->cat2->getMood());
     }
+
+    function testCatMoodOnEightLivesIsAmorous() {
+        $this->cat2->kill();
+        $this->assertEquals("amorous", $this->cat2->getMood());
+    }
 }

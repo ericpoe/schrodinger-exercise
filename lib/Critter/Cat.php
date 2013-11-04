@@ -13,6 +13,8 @@ use Schrodinger\CritterI;
 class Cat implements CritterI {
     protected $alive;
     protected $lifeCount;
+    protected $mood = ["disappointed", "afraid", "angry", "irritated", "grumpy", "nonchalant", "crazy", "happy",
+        "amorous", "loving"];
 
     /**
      * Empty Constructor
@@ -45,8 +47,12 @@ class Cat implements CritterI {
      * 2 lives: angry
      * 1 life:  afraid
      * 0 lives: disappointed
+     *
+     * @return mixed mood based on remaining lives
      */
-    public function getMood(){}
+    public function getMood(){
+        return $this->mood[$this->lifeCount];
+    }
 
     public function kill(){
         if($this->alive){

@@ -20,7 +20,7 @@ class Cat implements CritterI {
      * Empty Constructor
      * When the Cat is created, it must be alive and must have all 9 lives intact.
      */
-    public function __construct(){
+    public function __construct() {
         $this->alive = True;
         $this->lifeCount = 9;
     }
@@ -30,7 +30,7 @@ class Cat implements CritterI {
      * Determines if the Cat is alive or not.
      * @return bool state of life
      */
-    public function isAlive(){
+    public function isAlive() {
         return $this->alive;
     }
 
@@ -50,20 +50,20 @@ class Cat implements CritterI {
      *
      * @return mixed mood based on remaining lives
      */
-    public function getMood(){
+    public function getMood() {
         return $this->mood[$this->lifeCount];
     }
 
-    public function kill(){
+    public function kill() {
         if($this->alive){
             $this->lifeCount--;
             echo "Kill!\n";
         }
-        if($this->lifeCount == 0){
+        if($this->lifeCount == 0) {
             $this->alive = False;
             echo "Dead.\n";
         }
     }
 
-    public function speak(){}
+    public function speak() {}
 }

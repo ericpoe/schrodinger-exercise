@@ -10,4 +10,6 @@
 namespace Schrodinger\Container;
 
 
-class Box {}
+class Box {
+
+}

@@ -41,7 +41,7 @@ class Cat implements CritterI {
      * 6 lives: crazy
      * 5 lives: nonchalant
      * 4 lives: grumpy
-     * 3 lives: pissed
+     * 3 lives: irritated
      * 2 lives: angry
      * 1 life:  afraid
      * 0 lives: disappointed

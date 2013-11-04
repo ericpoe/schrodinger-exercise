@@ -7,7 +7,6 @@ use Schrodinger\Critter\Cat;
 
 class CatTest extends \PHPUnit_Framework_TestCase {
     protected $cat;
-    protected $cat2;
 
     function setUp() {
         $this->cat = new Cat();
@@ -30,11 +29,25 @@ class CatTest extends \PHPUnit_Framework_TestCase {
     }
 
     function testCatMoodOnNineLivesIsLoving() {
-        $this->assertEquals("loving", $this->cat2->getMood());
+        $this->assertEquals("loving", $this->cat->getMood());
     }
 
     function testCatMoodOnEightLivesIsAmorous() {
-        $this->cat2->kill();
-        $this->assertEquals("amorous", $this->cat2->getMood());
+        $this->cat->kill();
+        $this->assertEquals("amorous", $this->cat->getMood());
+    }
+
+    function testCatMoodOnSevenLivesIsHappy() {
+        $this->cat->kill();
+        $this->cat->kill();
+        $this->assertEquals("happy", $this->cat->getMood());
+    }
+
+    function testCatMoodOnSixLivesIsCrazy() {
+        $this->cat->kill();
+        $this->cat->kill();
+        $this->cat->kill();
+        $this->assertEquals("crazy", $this->cat->getMood());
+
     }
 }

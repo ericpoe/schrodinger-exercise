@@ -33,21 +33,22 @@ class CatTest extends \PHPUnit_Framework_TestCase {
     }
 
     function testCatMoodOnEightLivesIsAmorous() {
-        $this->cat->kill();
+        for( $i = 0; $i < 1 ; $i++ );
+            $this->cat->kill();
         $this->assertEquals("amorous", $this->cat->getMood());
     }
 
     function testCatMoodOnSevenLivesIsHappy() {
-        $this->cat->kill();
-        $this->cat->kill();
+        for( $i = 0; $i < 2 ; $i++ ){
+            $this->cat->kill();
+        }
         $this->assertEquals("happy", $this->cat->getMood());
     }
 
     function testCatMoodOnSixLivesIsCrazy() {
-        $this->cat->kill();
-        $this->cat->kill();
-        $this->cat->kill();
+        for( $i = 0; $i < 3 ; $i++){
+            $this->cat->kill();
+        }
         $this->assertEquals("crazy", $this->cat->getMood());
-
     }
 }

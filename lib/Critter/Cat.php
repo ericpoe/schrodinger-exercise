@@ -3,7 +3,7 @@
  * Cat
  * Each Cat has 9 lives and her mood is dependent upon how many lives she has remaining. The Cat is able to vocalize
  * each mood with clarity, if one knows how to listen. Although it is difficult to kill a Cat,
- * it can be done with a little persistence.
+ * it can be done with a little curiosity and persistence.
  */
 
 namespace Schrodinger\Critter;

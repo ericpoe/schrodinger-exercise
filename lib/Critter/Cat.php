@@ -65,5 +65,19 @@ class Cat implements CritterI {
         }
     }
 
+    /**
+     * speak
+     * The manner in which a Cat speaks is entirely dependent upon its mood.
+     * Loving: "purr"
+     * Amorous: "Purr"
+     * Happy: "purr"
+     * Crazy: "Ack, Thbbft!"
+     * Nonchalant: "..."
+     * Grumpy: "Coffee or die()"
+     * Irritated: "I ninja"
+     * Angry: "Rrowr"
+     * Afraid: "I can has cheeseburger?"
+     * Disappointed: "Meh"
+     */
     public function speak() {}
 }

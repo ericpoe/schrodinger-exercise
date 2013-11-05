@@ -4,7 +4,8 @@
 
 namespace Schrodinger;
 
-interface CritterI {
+interface CritterI
+{
     public function isAlive();
     public function getMood();
     public function kill();

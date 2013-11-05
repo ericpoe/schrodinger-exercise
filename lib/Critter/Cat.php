@@ -3,14 +3,15 @@
  * Cat
  * Each Cat has 9 lives and her mood is dependent upon how many lives she has remaining. The Cat is able to vocalize
  * each mood with clarity, if one knows how to listen. Although it is difficult to kill a Cat,
- * it can be done with a little persistence.
+ * it can be done with a little curiosity and persistence.
  */
 
 namespace Schrodinger\Critter;
 
 use Schrodinger\CritterI;
 
-class Cat implements CritterI {
+class Cat implements CritterI
+{
     protected $alive;
     protected $lifeCount;
     protected $mood = ["disappointed", "afraid", "angry", "irritated", "grumpy", "nonchalant", "crazy", "happy",
@@ -20,8 +21,9 @@ class Cat implements CritterI {
      * Empty Constructor
      * When the Cat is created, it must be alive and must have all 9 lives intact.
      */
-    public function __construct() {
-        $this->alive = True;
+    public function __construct()
+    {
+        $this->alive = true;
         $this->lifeCount = 9;
     }
 
@@ -30,7 +32,8 @@ class Cat implements CritterI {
      * Determines if the Cat is alive or not.
      * @return bool state of life
      */
-    public function isAlive() {
+    public function isAlive()
+    {
         return $this->alive;
     }
 
@@ -50,26 +53,29 @@ class Cat implements CritterI {
      *
      * @return mixed mood based on remaining lives
      */
-    public function getMood() {
+    public function getMood()
+    {
         return $this->mood[$this->lifeCount];
     }
 
-    public function kill() {
-        if($this->alive){
+    public function kill()
+    {
+        if ($this->alive) {
             $this->lifeCount--;
             echo "Kill!\n";
         }
-        if($this->lifeCount == 0) {
-            $this->alive = False;
+        if ($this->lifeCount == 0) {
+            $this->alive = false;
             echo "Dead.\n";
         }
     }
 
+
     /**
      * speak
      * The manner in which a Cat speaks is entirely dependent upon its mood.
-     * Loving: "purr"
-     * Amorous: "Purr"
+     * Loving: "meow"
+     * Amorous: "me yow!"
      * Happy: "purr"
      * Crazy: "Ack, Thbbft!"
      * Nonchalant: "..."
@@ -79,5 +85,8 @@ class Cat implements CritterI {
      * Afraid: "I can has cheeseburger?"
      * Disappointed: "Meh"
      */
-    public function speak() {}
+    public function speak()
+    {
+
+    }
 }

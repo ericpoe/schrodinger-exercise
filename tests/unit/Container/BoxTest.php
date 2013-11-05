@@ -1,21 +1,20 @@
 <?php
 /**
- * User: eric
- * Date: 10/11/13
  */
+namespace SchrodingerTest\Container\BoxTest;
 
 use Schrodinger\Container\Box;
 use Schrodinger\Critter\Cat;
 
 class BoxTest extends \PHPUnit_Framework_TestCase
 {
-    function testCreateBox()
-    {
-        $box = new Box();
-    }
+    protected $box;
+    protected $critter;
 
-    function testCreateBoxWithCritter(){
+
+    public function setUp()
+    {
         $critter = new Cat();
-        $box2 = new Box($critter);
+        $box = new Box($critter);
     }
 }

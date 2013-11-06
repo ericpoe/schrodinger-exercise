@@ -62,11 +62,9 @@ class Cat implements CritterI
     {
         if ($this->alive) {
             $this->lifeCount--;
-            echo "Kill!\n";
         }
         if ($this->lifeCount == 0) {
             $this->alive = false;
-            echo "Dead.\n";
         }
     }
 

@@ -60,8 +60,9 @@ class CatTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals("crazy", $this->cat->getMood());
     }
 
-    function testCatMoodOnFiveLivesIsNonchalant() {
-        for( $i = 0; $i < 4 ; $i++ ){
+    public function testCatMoodOnFiveLivesIsNonchalant()
+    {
+        for ($i = 0; $i < 4; $i++) {
             $this->cat->kill();
         }
         $this->assertEquals("nonchalant", $this->cat->getMood());

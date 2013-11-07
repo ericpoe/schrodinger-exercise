@@ -75,4 +75,12 @@ class CatTest extends \PHPUnit_Framework_TestCase
         }
         $this->assertEquals("grumpy", $this->cat->getMood());
     }
+
+    public function testCatMoodOnThreeLivesIsIrritated()
+    {
+        for ($i = 0; $i < 6; $i++) {
+            $this->cat->kill();
+        }
+        $this->assertEquals("irritated", $this->cat->getMood());
+    }
 }

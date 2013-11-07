@@ -67,4 +67,12 @@ class CatTest extends \PHPUnit_Framework_TestCase
         }
         $this->assertEquals("nonchalant", $this->cat->getMood());
     }
+
+    public function testCatMoodOnFourLivesIsGrumpy()
+    {
+        for ($i = 0; $i < 5; $i++) {
+            $this->cat->kill();
+        }
+        $this->assertEquals("grumpy", $this->cat->getMood());
+    }
 }

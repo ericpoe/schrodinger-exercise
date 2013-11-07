@@ -83,4 +83,12 @@ class CatTest extends \PHPUnit_Framework_TestCase
         }
         $this->assertEquals("irritated", $this->cat->getMood());
     }
+
+    public function testCatMoodOnTwoLivesIsAngry()
+    {
+        for ($i = 0; $i < 7; $i++) {
+            $this->cat->kill();
+        }
+        $this->assertEquals("angry", $this->cat->getMood());
+    }
 }

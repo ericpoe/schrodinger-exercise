@@ -14,7 +14,7 @@ class Cat implements CritterI
 {
     protected $alive;
     protected $lifeCount;
-    protected $mood = ["disappointed", "afraid", "angry", "irritated", "grumpy", "nonchalant", "crazy", "happy",
+    protected $mood = ["disappointed", "afraid", "angry", "irritated", "grumpy", "cool", "crazy", "happy",
         "amorous", "loving"];
 
     /**
@@ -44,7 +44,7 @@ class Cat implements CritterI
      * 8 lives: amorous
      * 7 lives: happy
      * 6 lives: crazy
-     * 5 lives: nonchalant
+     * 5 lives: cool
      * 4 lives: grumpy
      * 3 lives: irritated
      * 2 lives: angry

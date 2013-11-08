@@ -38,7 +38,7 @@ class CatTest extends \PHPUnit_Framework_TestCase
             "amorous",
             "happy",
             "crazy",
-            "nonchalant",
+            "cool",
             "grumpy",
             "irritated",
             "angry",

@@ -14,8 +14,11 @@ class Cat implements CritterI
 {
     protected $alive;
     protected $lifeCount;
-    protected $mood = ["disappointed", "afraid", "angry", "irritated", "grumpy", "nonchalant", "crazy", "happy",
+    protected $mood = ["disappointed", "afraid", "angry", "irritated", "grumpy", "cool", "crazy", "happy",
         "amorous", "loving"];
+
+    protected $speech = ["Meh", "I can has cheeseburger?", "Rrowr", "I ninja", "Coffee or die()", "...", "Ack, Thbbft!",
+        "purr", "me yow!", "meow"];
 
     /**
      * Empty Constructor
@@ -44,7 +47,7 @@ class Cat implements CritterI
      * 8 lives: amorous
      * 7 lives: happy
      * 6 lives: crazy
-     * 5 lives: nonchalant
+     * 5 lives: cool
      * 4 lives: grumpy
      * 3 lives: irritated
      * 2 lives: angry
@@ -71,20 +74,23 @@ class Cat implements CritterI
 
     /**
      * speak
-     * The manner in which a Cat speaks is entirely dependent upon its mood.
+     * The manner in which a Cat speaks is entirely dependent upon its remaining lives.
      * Loving: "meow"
      * Amorous: "me yow!"
      * Happy: "purr"
      * Crazy: "Ack, Thbbft!"
-     * Nonchalant: "..."
+     * Cool: "..."
      * Grumpy: "Coffee or die()"
      * Irritated: "I ninja"
      * Angry: "Rrowr"
      * Afraid: "I can has cheeseburger?"
      * Disappointed: "Meh"
+     *
+     * @return mixed speech based on remaining lives
      */
     public function speak()
     {
+        return $this->speech[$this->lifeCount];
 
     }
 }

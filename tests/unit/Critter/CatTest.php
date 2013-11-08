@@ -31,41 +31,28 @@ class CatTest extends \PHPUnit_Framework_TestCase
         $this->assertFalse($this->cat->isAlive());
     }
 
-    public function testCatMoodOnNineLivesIsLoving()
+    public function testCatMoodAndSpeechBasedOnLivesLeft()
     {
-        $this->assertEquals("loving", $this->cat->getMood());
-    }
+        $status = [
+            ["loving", "meow"],
+            ["amorous", "me yow!"],
+            ["happy", "purr"],
+            ["crazy", "Ack, Thbbft!"],
+            ["cool", "..."],
+            ["grumpy", "Coffee or die()"],
+            ["irritated", "I ninja"],
+            ["angry", "Rrowr"],
+            ["afraid", "I can has cheeseburger?"],
+            ["disappointed", "Meh"]
+        ];
 
-    public function testCatMoodOnEightLivesIsAmorous()
-    {
-        for ($i = 0; $i < 1; $i++) {
-            $this->cat->kill();
+        for ($i = 0; $i < 10; $i++) {
+            // Don't kill the cat before we have a chance to gauge its status.
+            if ($i > 0) {
+                $this->cat->kill();
+            }
+            $this->assertEquals($status[$i][0], $this->cat->getMood());
+            $this->assertEquals($status[$i][1], $this->cat->speak());
         }
-        $this->assertEquals("amorous", $this->cat->getMood());
-    }
-
-    public function testCatMoodOnSevenLivesIsHappy()
-    {
-        for ($i = 0; $i < 2; $i++) {
-            $this->cat->kill();
-        }
-        $this->assertEquals("happy", $this->cat->getMood());
-    }
-
-    public function testCatMoodOnSixLivesIsCrazy()
-    {
-        for ($i = 0; $i < 3; $i++) {
-            $this->cat->kill();
-        }
-        $this->assertEquals("crazy", $this->cat->getMood());
-    }
-
-
-    public function testCatMoodOnFiveLivesIsNonchalant()
-    {
-        for ($i = 0; $i < 4; $i++) {
-            $this->cat->kill();
-        }
-        $this->assertEquals("nonchalant", $this->cat->getMood());
     }
 }

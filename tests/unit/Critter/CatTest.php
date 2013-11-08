@@ -54,4 +54,28 @@ class CatTest extends \PHPUnit_Framework_TestCase
             $this->assertEquals($mood[$i], $this->cat->getMood());
         }
     }
+
+    public function testCatSpeechBasedOnLivesLeft()
+    {
+        $speech = [
+            "meow",
+            "me yow!",
+            "purr",
+            "Ack, Thbbft!",
+            "...",
+            "Coffee or die()",
+            "I ninja",
+            "Rrowr",
+            "I can has cheeseburger?",
+            "Meh"
+        ];
+
+        for ($i = 0; $i < 10; $i++) {
+            // Don't kill the cat before we have a chance to hear what it has to say.
+            if ($i > 0) {
+                $this->cat->kill();
+            }
+            $this->assertEquals($speech[$i], $this->cat->speak());
+        }
+    }
 }

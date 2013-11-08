@@ -17,6 +17,9 @@ class Cat implements CritterI
     protected $mood = ["disappointed", "afraid", "angry", "irritated", "grumpy", "cool", "crazy", "happy",
         "amorous", "loving"];
 
+    protected $speech = ["Meh", "I can has cheeseburger?", "Rrowr", "I ninja", "Coffee or die()", "...", "Ack, Thbbft!",
+        "purr", "me yow!", "meow"];
+
     /**
      * Empty Constructor
      * When the Cat is created, it must be alive and must have all 9 lives intact.
@@ -76,7 +79,7 @@ class Cat implements CritterI
      * Amorous: "me yow!"
      * Happy: "purr"
      * Crazy: "Ack, Thbbft!"
-     * Nonchalant: "..."
+     * Cool: "..."
      * Grumpy: "Coffee or die()"
      * Irritated: "I ninja"
      * Angry: "Rrowr"
@@ -85,6 +88,7 @@ class Cat implements CritterI
      */
     public function speak()
     {
+        return $this->speech[$this->lifeCount];
 
     }
 }

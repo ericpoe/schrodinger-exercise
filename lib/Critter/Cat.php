@@ -74,7 +74,7 @@ class Cat implements CritterI
 
     /**
      * speak
-     * The manner in which a Cat speaks is entirely dependent upon its mood.
+     * The manner in which a Cat speaks is entirely dependent upon its remaining lives.
      * Loving: "meow"
      * Amorous: "me yow!"
      * Happy: "purr"
@@ -85,6 +85,8 @@ class Cat implements CritterI
      * Angry: "Rrowr"
      * Afraid: "I can has cheeseburger?"
      * Disappointed: "Meh"
+     *
+     * @return mixed speech based on remaining lives
      */
     public function speak()
     {

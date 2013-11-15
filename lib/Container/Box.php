@@ -2,10 +2,11 @@
 /**
  */
 
-namespace Schrodinger\Container;
+namespace SchrodingerTest\Container\Box;
 
+use Schrodinger\Container\Box;
 
-class Box
+class BoxTest extends \PHPUnit_Framework_TestCase
 {
 
 }

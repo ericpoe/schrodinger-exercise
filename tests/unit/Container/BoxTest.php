@@ -4,6 +4,7 @@
 
 namespace SchrodingerTest;
 
+use Schrodinger\Container\Box;
 
 class BoxTest extends \PHPUnit_Framework_TestCase
 {
@@ -11,13 +12,11 @@ class BoxTest extends \PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $this->$box = new Box();
+        $this->box = new Box();
     }
 
-    public function boxIsObservable()
+    public function testBoxInteriorIsObservable()
     {
-
+        $this->assertTrue($this->box->isObservable());
     }
-
 }
- 

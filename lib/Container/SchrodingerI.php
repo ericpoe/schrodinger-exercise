@@ -16,4 +16,10 @@ interface SchrodingerI
     public function isObservable();
     public function containsWeapon();
     public function containsCritter();
+
+    /**
+     * The state of the Schrodinger container is either open or closed.
+     * @return SchrodingerI an object that is now open or closed.
+     */
+    public function changeState();
 }

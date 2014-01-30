@@ -12,11 +12,8 @@ class BoxTest extends \PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $this->box = new Box();
+        $this->box = new SchrodingerOpen();
     }
 
-    public function testBoxInteriorIsObservable()
-    {
-        $this->assertTrue($this->box->isObservable());
-    }
+    public function testBox
 }

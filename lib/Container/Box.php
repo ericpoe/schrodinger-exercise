@@ -2,35 +2,13 @@
 /**
  * Box.
  * A Box is the most basic form of a Schrodinger Container.
- * @package Schrodinger
  */
 
 namespace Schrodinger\Container;
 
+use Schrodinger\SchrodingerA;
 
-use Schrodinger\SchrodingerI;
-
-class Box implements SchrodingerI
+class Box extends SchrodingerA
 {
-    protected $boxIsObservable;
 
-    public function __construct()
-    {
-        $this->boxIsObservable = true;
-    }
-
-    public function isObservable()
-    {
-        return $this->boxIsObservable;
-    }
-
-    public function containsCritter()
-    {
-
-    }
-
-    public function containsWeapon()
-    {
-
-    }
 }

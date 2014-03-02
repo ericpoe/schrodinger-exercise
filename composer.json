@@ -20,8 +20,6 @@
         "whatthejeff/nyancat-phpunit-resultprinter": "1.2.*"
     },
     "autoload": {
-        "classmap": [
-            "lib/"
-        ]
+        "psr-4": {"Schrodinger\\": "lib/"}
     }
 }

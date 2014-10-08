@@ -2,7 +2,7 @@
 /**
  */
 
-namespace Schrodinger;
+namespace Schrodinger\Critter;
 
 interface CritterI
 {

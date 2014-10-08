@@ -9,7 +9,7 @@
  * @package Schrodinger
  */
 
-namespace Schrodinger;
+namespace Schrodinger\Container;
 
 interface SchrodingerI
 {

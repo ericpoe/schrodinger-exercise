@@ -8,8 +8,6 @@
 
 namespace Schrodinger\Critter;
 
-use Schrodinger\CritterI;
-
 class Cat implements CritterI
 {
     protected $alive;

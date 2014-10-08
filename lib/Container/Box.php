@@ -7,9 +7,6 @@
 
 namespace Schrodinger\Container;
 
-
-use Schrodinger\SchrodingerI;
-
 class Box implements SchrodingerI
 {
     protected $boxIsObservable;

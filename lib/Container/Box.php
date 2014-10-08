@@ -1,6 +1,5 @@
 <?php
 /**
- * Box.
  * A Box is the most basic form of a Schrodinger Container.
  * @package Schrodinger
  */

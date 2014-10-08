@@ -1,4 +1,16 @@
 {
+    "name": "ericpoe/schrodinger",
+    "description": "An OOP thought-exercise to model Schrödinger's Cat.",
+    "keywords": ["schrodinger", "Schrödinger", "Schrodinger's Cat"],
+    "homepage": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eric Poe",
+            "email": "eric.poe@gmail.com",
+            "homepage": ""
+        }
+    ],
     "require": {
         "php": ">=5.4"
     },
